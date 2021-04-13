@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Сайт для поиска новостей с возможностью сохранения их в личном кабинете">
+  <meta name="author" content="">
+  <title>ar</title>
+  <link rel="icon" href="../images/favicon.svg">
+  <link rel="stylesheet" href="../styles/main.216e4f03b8e56537768d.css">
+</head>
+
+<body>
+  <div class="root">
+    <header class="header">
+      <a href="#" class="header__logo">News Explorer</a>
+      <button class="header__menu"></button>
+      <nav class="header__nav">
+        <ul class="header__nav-items">
+          <li class="header__nav-item">
+            <a href="#" class="header__nav-main">Главная</a>
+          </li>
+          <li class="header__nav-item header_display">
+            <a href="#" class="header__nav-main">Сохраненные статьи</a>
+          </li>
+          <li class="header__nav-item">
+            <button class="header__nav-button header__nav-button-icon"></button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="search">
+        <h1 class="search__title">Что творится в мире?</h1>
+        <p class="search__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+        <form class="search__form" novalidate>
+          <input type="text" autocomplete="off" name="search" class="search__input" placeholder="Политика" required>
+          <span class="error error__search"></span>
+          <button class="button search__button">Искать</button>
+        </form>
+      </section>
+      <section class="preloader">
+        <div class="preloader__search">
+          <div class="preloader__circle"></div>
+          <p class="preloader__search-text">Идет поиск новостей...</p>
+        </div>
+        <div class="preloader__no-result">
+          <img class="preloader__image" src="../images/preloader-image.svg" alt="картинка - ничего не найдено">
+          <h4 class="preloader__result-title">Ничего не найдено</h4>
+          <p class="preloader__result-text">К сожалению по вашему запросу ничего не найдено.</p>
+        </div>
+        <div class="preloader__error">
+          <img class="preloader__image" src="../images/preloader-image.svg" alt="картинка - ничего не найдено">
+          <p class="preloader__result-text">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</p>
+        </div>
+      </section>
+     
+      <section class ="conteiner-text">
+        <p class ="conteiner-text__line">Сохранённые статьи</p>
+          <h3 class="conteiner-text__title"></h3>
+          <p class ="conteiner-text__subtitle">По ключевым словам&colon;</p>
+          <p class="conteiner-text__subtitle-bold"></p>
+      </section>
+
+
+
+
+
+      <section class ="list">
+        <h1 class ="list__title">Результаты поиска</h1>
+        <div class ="list__container"></div>
+        <div class ="list__container-add"></div>
+         
+            
+        </section >
+        <!--ABOUT-->
+        <section class="about-author">
+          <img src="../images/author.jpg" alt="аватар автора" class="about-author__avatar">
+          <h3 class="about-author__title">Об авторе</h3>
+          <p class="about-author__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
+            чем вы занимаетесь, какими технологиями разработки владеете.
+          </p>
+          <p class="about-author__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
+            и чем можете помочь потенциальным заказчикам.
+          </p>
+        </section>
+    </main>
+    <footer class="footer">
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__item-link">Главная</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://praktikum.yandex.ru/" class="footer__item-link" target="_blank">Яндекс.Практикум</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://github.com/pavelcydep" class="footer__item-link" target="_blank">
+              <img src="../images/github.svg" alt="иконка гитхаб" class="footer__icon">
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="https://facebook.com/" class="footer__item-link" target="_blank">
+              <picture>
+                <source media="(max-width: 767px)" srcset="../images/facebook.svg">
+                <source media="(max-width: 1374px)" srcset="../images/facebook-ring.svg">
+                <img src="../images/facebook.svg" alt="иконка фейсбук" class="footer__icon">
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="footer__copyright">&copy; 2020 Supersite, Powered by News API</p>
+    </footer>
+  </div>
+  <script src=".././scripts/articles.20d4a91b162b3f460a2f.js"></script>
+</body>
+
+</html>
