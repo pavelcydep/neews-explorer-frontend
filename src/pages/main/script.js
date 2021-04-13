@@ -19,7 +19,7 @@ import {
   popupAuthorization,
   formAuhorization,
   formRegistration,
-
+ 
 
   headerNavButton,
   popupButton,
