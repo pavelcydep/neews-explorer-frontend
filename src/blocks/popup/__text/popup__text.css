@@ -1,0 +1,13 @@
+@import url(./_dark/popup__text_dark.css);
+.popup__text{
+    box-sizing: border-box;
+    padding: 5px 6px 0px;
+   
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #2F71E5;
+    
+    
+}

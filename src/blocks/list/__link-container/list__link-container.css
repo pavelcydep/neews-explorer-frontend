@@ -1,0 +1,13 @@
+.list__link-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 0 0 24px;
+    transition: all .4s linear;
+    position: relative;
+    width: 100%;
+    color: black;
+}

@@ -1,0 +1,7 @@
+@import url("./_display/list__container-add_display.css");
+.list__container-add{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(200px,1fr));
+    grid-gap: 16px 16px;
+    margin: 0;
+}

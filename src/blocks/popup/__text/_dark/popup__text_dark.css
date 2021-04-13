@@ -1,0 +1,9 @@
+.popup__text_dark{
+    text-align: center;
+    cursor: pointer; 
+}
+.popup__text_dark:before{
+content: "или";
+color: black;
+
+}

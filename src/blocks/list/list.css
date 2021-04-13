@@ -1,0 +1,45 @@
+@import url(./__card/list__card.css);
+@import url(./__image/list__image.css);
+
+@import url(./__button/list__button.css);
+@import url(./__container/list__container.css);
+@import url(./__icon/list__icon.css);
+@import url(./__data/list__data.css);
+@import url(./__link/list__link.css);
+@import url(./__subtitle/list__subtitle.css);
+@import url(./__text/list__text.css);
+@import url(./__rectangle/list__rectangle.css);
+@import url(./__image-rectangle/list__image-rectangle.css);
+@import url(./__image-rectangle/_text/list__image-rectangle_text.css);
+@import url(./__container/_display-none/list__container_display-none.css);
+@import url(./__rectangle/_delete/list__rectangle_delete.css);
+@import url(./__link-container/list__link-container.css);
+@import url(./__image-container/list__image-container.css);
+@import url(./__image/list__image.css);
+@import url(./__container-text/list__container-text.css);
+@import url(./list_display.css);
+@import url(./__hint/list__hint.css);
+@import url(./__hint/_saved/list__hint_saved.css);
+@import url(./__hint/_display/list__hint_display.css);
+@import url(./__container-add/list__container-add.css);
+.list{
+    flex-direction:column;
+    display:flex;
+    font-family: 'Roboto', Arial, sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #f5f6f7;
+    
+  
+    
+  
+    padding: 63px calc((100% - 1232px) / 2) 64px;
+display:none;
+  }
+  @media (max-width : 910px) {
+	.list{
+		padding-left: 0px;
+    padding-right: 0px;
+	}
+}
+

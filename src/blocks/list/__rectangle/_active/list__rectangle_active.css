@@ -1,0 +1,16 @@
+.list__rectangle_active{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: #fff;
+   
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+    outline: none;
+    cursor: pointer;
+    background-image: url(../../../../images/collection-marked.svg);
+
+}

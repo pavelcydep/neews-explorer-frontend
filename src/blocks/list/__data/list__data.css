@@ -1,0 +1,16 @@
+.list__data{
+     
+        font-family: 'Sans Pro', Arial, sans-serif;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        color: #b6bcbf;
+        margin: 20px 0 0 22px;
+      }
+      
+      @media (max-width : 1374px) {
+        .list__data {
+          margin: 16px 0 0 16px;
+        }
+      }
+

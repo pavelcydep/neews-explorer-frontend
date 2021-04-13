@@ -1,0 +1,22 @@
+.about-author__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 25px 0 24px;
+  }
+  
+  .about-author__text:last-child {
+    margin: 0;
+  }
+  
+  @media (max-width : 1374px) {
+    .about-author__text {
+      margin: 9px 0 24px;
+    }
+  }
+  
+  @media (max-width : 767px) {
+    .about-author__text {
+      margin: 15px 0 24px;
+    }
+  }
