@@ -1,8 +1,7 @@
 {
-  "name": "news-explorer-frontend",
-  "homepage": "https://dimukko.github.io/news-explorer-frontend/",
-  "version": "0.1.0",
-  "description": "Фронтенд для дипломной работы",
+  "name": "diplomjs2",
+  "version": "1.0.0",
+  "description": "[![](https://pictures.s3.yandex.net/frontend-developer/dom_bom/logo.svg)](https://praktikum.yandex.ru/profile/web-developer/)\r ## Фронтенд",
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
@@ -11,12 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dimukko/news-explorer-frontend.git"
+    "url": "git+https://github.com/pavelcydep/neews-explorer-frontend.git"
   },
-  "author": "Dimka",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dimukko/news-explorer-frontend/issues"
+    "url": "https://github.com/pavelcydep/neews-explorer-frontend/issues",
+    "homepage": "https://github.com/pavelcydep/neews-explorer-frontend#readme"
   },
   "dependencies": {
     "autoprefixer": "9.7.6",
