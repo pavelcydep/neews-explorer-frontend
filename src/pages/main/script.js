@@ -35,7 +35,7 @@ import {
     sortingKeywords,formatDate,
   } from '../../scripts/utils/utils';
 
-  //КРЕСТИКА НЕТ ПОТОМУ ЧТО НЕТ ИЗОБРАЖЕНИЯ В DIST ПОПРАВИТЬ 
+  
 
 
 
