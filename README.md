@@ -4,7 +4,7 @@
 # [**News Explorer**](https://pavelcydep.github.io/neews-explorer-frontend/)
 
 ## Technologies
-
+*аааа
 * HTML 
 * CSS
 * JS

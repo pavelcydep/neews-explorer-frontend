@@ -1,5 +1,4 @@
 
-
 export default class NewsCardList {
   constructor(
     list,
@@ -7,43 +6,39 @@ export default class NewsCardList {
     preloader,
     newsApi,
     createCardFunction,
+    listButton,
   ) {
     this.list = list;
     this.listcontainerCards = list.querySelector('.list__container');
-    
+
     this.preloaderSearch = preloader.querySelector('.preloader__search');
     this.preloaderResult = preloader.querySelector('.preloader__no-result');
     this.preloaderError = preloader.querySelector('.preloader__error');
     this.searchForm = search.querySelector('.search__form');
     this.newsApi = newsApi;
     this.createCardFunction = createCardFunction;
+    this.listButton = listButton;
   }
 
   addCard(cardElement) {
     this.listcontainerCards.appendChild(cardElement);
   }
 
-preloader(){
-  this.preloaderSearch.classList.remove('preloader_display');
-  this.preloaderResult.classList.add('preloader_display');
-}
+  preloader() {
+    this.preloaderSearch.classList.remove('preloader_display');
+    this.preloaderResult.classList.add('preloader_display');
+  }
 
-renderCard(json,i){
-   
+  renderCard(json, i) {
   // eslint-disable-next-line max-len
-  this.addCard((this.createCardFunction().createCard(json.articles[i])));
-
-}
-
+    this.addCard((this.createCardFunction().createCard(json.articles[i])));
+  }
 
 
-  
-
-  searchNews(){
-    
+  searchNews() {
     if (this.searchForm.querySelector('input')) {
       this.list.classList.remove('list_display');
-     
+
       localStorage.setItem('keyword', `${this.searchForm.search.value.toLowerCase()}`);
       this.preloaderSearch.classList.add('preloader_display');
       this.preloaderResult.classList.remove('preloader_display');
@@ -54,7 +49,7 @@ renderCard(json,i){
             return res.json().then((json) => {
               for (let i = 0; i < 3; i += 1) {
                 // eslint-disable-next-line max-len
-                this.renderCard(json,i);
+                this.renderCard(json, i);
               }
               this.preloaderSearch.classList.remove('preloader_display');
               this.list.classList.add('list_display');
@@ -76,20 +71,18 @@ renderCard(json,i){
     }
     this.searchForm.reset();
   }
-  
+
 
   addListNews() {
     const container = this.listcontainerCards.children.length;
-   
+
     if (container < 100) {
       this.newsApi.getNews().then((res) => {
         if (res.ok) {
           return res.json().then((json) => {
-            
             for (let i = container; i < container + 3; i += 1) {
               // eslint-disable-next-line max-len
-              this.renderCard(json,i);
-            
+              this.renderCard(json, i);
             }
           }).catch((e) => {
             this.listButton.textContent = 'Ошибка';
@@ -105,8 +98,4 @@ renderCard(json,i){
       this.listButton.classList.add('list_display-none');
     }
   }
-
-  
-
- 
 }

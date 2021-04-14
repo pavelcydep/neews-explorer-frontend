@@ -1,9 +1,10 @@
 
 @import url(./__line/conteiner-text__line.css);
-@import url(./__subtitle-bold/conteiner-text-bold.css);
+@import url(./__subtitle-bold/conteiner-text__subtitle-bold.css);
 @import url(./__subtitle/conteiner-text__subtitle.css);
 @import url(./__title/conteiner-text__title.css);
 @import url(./_display/conteiner-text_display.css);
+@import url(./__subtitle-bold/_display-none/conteiner-text__subtitle-bold_display-none.css);
 .conteiner-text {
   font-family: 'Roboto', Arial, sans-serif;
   display: none;

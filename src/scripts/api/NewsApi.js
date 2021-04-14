@@ -11,7 +11,4 @@ export default class NewsApi {
     pageSize: 100,
     apiKey: 'ac7cacde540c4021b2b7798afadfb16d',
   })}`)
-
-
- 
 }
