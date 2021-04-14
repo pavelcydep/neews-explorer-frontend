@@ -11,43 +11,38 @@ import {
   search,
   preloader,
   conteinerText,
-  list, headerNav,
- popupRegistration,
-  popupAuthorization,
+  list, headerNav, headerNavItems,
   formAuhorization,
   formRegistration,
   headerNavButton,
-  popupButton,
-  popupSuccessfulRegistration,
   listButton,
   footer,
   headerMenu,
-  searchForm,serverUrl,serverUrlNews,
-  } from '../../scripts/constants/constants';
+  searchForm, serverUrl, serverUrlNews,
+} from '../../scripts/constants/constants';
 import {
   openCloseNav,
-    formatDate,
-    sortingKeywords,
+  formatDate,
+
 } from '../../scripts/utils/utils';
 
 
-
-const headerMenuClose = document.querySelector('.header__menu_close');
 const listContainerCards = document.querySelector('.list__container');
-const headerNavItem = document.querySelectorAll(".header__nav-item");
-const  headerLogo = document.querySelector(".header__logo");
+const headerNavItem = document.querySelectorAll('.header__nav-item');
+const headerLogo = document.querySelector('.header__logo');
 const listContainerAdd = document.querySelector('.list__container-add');
-const headerNavButtonIcon = document.querySelector(".header__nav-button-icon");
+const headerNavButtonIcon = document.querySelector('.header__nav-button-icon');
 const mainApi = new MainApi(serverUrl, formAuhorization, formRegistration);
-const headerNavMain = document.querySelectorAll(".header__nav-main");
-const abouthAuthor = document.querySelector(".about-author");
+const headerNavMain = document.querySelectorAll('.header__nav-main');
+const abouthAuthor = document.querySelector('.about-author');
 const newsApi = new NewsApi(serverUrlNews);
 
 const createCardFunction = () => new NewsCard(
-  list, conteinerText, mainApi, createCardFunction, formatDate , sortingKeywords,
-  'article',);
+  list, conteinerText, mainApi, createCardFunction, formatDate,
+  'article',
+);
 
-const savedArticles = new SavedArticles( header,
+const savedArticles = new SavedArticles(header,
   list,
   search,
   abouthAuthor,
@@ -57,20 +52,22 @@ const savedArticles = new SavedArticles( header,
   openCloseNav,
   mainApi,
   createCardFunction,
-  sortingKeywords,
   listContainerCards,
-  listContainerAdd
-  
-  );
-  const newsCardList = new NewsCardList(list, search, preloader, newsApi, createCardFunction);
+  listContainerAdd);
+const newsCardList = new NewsCardList(
+  list,
+  search,
+  preloader,
+  newsApi,
+  createCardFunction,
+  listButton,
+);
 document.title = localStorage.getItem('nameUser');
 header.querySelector('.header__nav-button').textContent = localStorage.getItem('nameUser');
 
 
-
-
-
-headerNavItem[1].addEventListener("click",()=>{
+headerNavItem[1].addEventListener('click', () => {
+  abouthAuthor.classList.add('about-author_display-none');
   root.classList.remove('root_dark');
   header.classList.remove('header_dark');
   headerMenu.classList.remove('header__menu_close');
@@ -79,41 +76,42 @@ headerNavItem[1].addEventListener("click",()=>{
   headerNavItem[2].classList.remove('header__nav_drop-down-nav-item');
   headerNavMain[0].classList.remove('header__nav_drop-down-nav-main');
   headerNavButton.classList.remove('.header__nav_drop-down-nav-button');
-  header.classList.add("header_boxShadow");
-  headerLogo.classList.add("header__logo_color"); 
- headerMenu.classList.add("header__menu_dark");
-headerNavMain[0].classList.add("header__nav-main_color");
-headerNavMain[1].classList.add("header__nav-main_color");
-headerNavButtonIcon.classList.add("header__nav-button-icon_color");
-headerNavButtonIcon.classList.remove("header__nav-button-icon");
+  header.classList.add('header_boxShadow');
+  headerLogo.classList.add('header__logo_color');
+  headerMenu.classList.add('header__menu_dark');
+  headerNavMain[0].classList.add('header__nav-main_color');
+  headerNavMain[1].classList.add('header__nav-main_color');
+  headerNavButtonIcon.classList.add('header__nav-button-icon_color');
+  headerNavButtonIcon.classList.remove('header__nav-button-icon');
 
-headerNavButtonIcon.classList.add("header__nav-button-icon_dark");
-headerNavButton.classList.add('header__nav-button_color');
-search.classList.add('search_display-none');
-    author.classList.add('author_display-none');
-    conteinerText.classList.add('conteiner-text_display');
-    listContainerCards.classList.add('list__container_display-none');
-    list.classList.add('list_display');
-    savedArticles.createSaveArticles();
+  headerNavButtonIcon.classList.add('header__nav-button-icon_dark');
+  headerNavButton.classList.add('header__nav-button_color');
+  search.classList.add('search_display-none');
+  abouthAuthor.classList.add('about-author_display-none');
+  conteinerText.classList.add('conteiner-text_display');
+  listContainerCards.classList.add('list__container_display-none');
+  list.classList.add('list_display');
+
+  savedArticles.createSaveArticles();
 });
 
-headerNavItem[2].addEventListener("click",()=>{
+headerNavItem[2].addEventListener('click', () => {
   window.location.href = '../';
 });
 
-headerMenu.addEventListener("click",()=>{
-  openCloseNav();});
+headerMenu.addEventListener('click', () => {
+  openCloseNav();
+});
 
+headerNavItem[0].addEventListener('click', () => {
+  window.location.href = './';
+});
 
-searchForm.addEventListener("submit", (event) => {
+searchForm.addEventListener('submit', (event) => {
   event.preventDefault();
   newsCardList.searchNews();
 });
 
-listButton.addEventListener("click", () => {
-  
+listButton.addEventListener('click', () => {
   newsCardList.addListNews();
-});
-headerMenuClose.addEventListener("click",()=>{
-  openCloseNav();
 });

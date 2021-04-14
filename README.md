@@ -4,7 +4,7 @@
 # [**News Explorer**]()
 
 ## Technologies
-
+*аааа
 * HTML 
 * CSS
 * JS

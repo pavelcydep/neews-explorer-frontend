@@ -15,53 +15,63 @@ import {
   preloader,
   conteinerText,
   list,
- popupRegistration,
+  popupRegistration,
   popupAuthorization,
   formAuhorization,
   formRegistration,
- 
-
+  popupClose,
+  popupLink,
   headerNavButton,
   popupButton,
   popupSuccessful,
   listButton,
-  headerMenu,searchForm, serverUrl,serverUrlNews, popupText, popupButtonRegistration,
-  headerNav,headerNavItems,headerNavItem, headerNavMain, 
+  headerMenu,
+  searchForm,
+  serverUrl,
+  serverUrlNews,
+  popupText,
+  popupButtonRegistration,
+  popupSuccessfulRegistration,
+  headerNav,
+  headerNavItems,
+  headerNavItem,
+  headerNavMain,
 
 
-  } from '../../scripts/constants/constants';
-  import{
-    openCloseNav,
-    sortingKeywords,formatDate,
-  } from '../../scripts/utils/utils';
-
-  
+} from '../../scripts/constants/constants';
+import {
+  openCloseNav,
+  formatDate,
+} from '../../scripts/utils/utils';
 
 
-
-
-  
 const mainApi = new MainApi(serverUrl, formAuhorization, formRegistration);
 const createCardFunction = () => new NewsCard(
-  list, conteinerText, mainApi, createCardFunction,formatDate , sortingKeywords,
-  'main');
+  list, conteinerText, mainApi, createCardFunction, formatDate, 'main',
+);
 
-  const formAuhorizationValidator = new Form(formAuhorization);
-  const formRegistrationValidator = new Form(formRegistration);
+const formAuhorizationValidator = new Form(formAuhorization);
+const formRegistrationValidator = new Form(formRegistration);
 const newsApi = new NewsApi(serverUrlNews);
-const newsCardList = new NewsCardList(list, search, preloader, newsApi, createCardFunction);
-const authorizationPopup = new Popup(popupAuthorization,'popup_display',mainApi,root);
-const registrationPopup = new Popup(popupRegistration,'popup_display',mainApi,root);
-const successfulPopup = new Popup(popupSuccessful,'popup_display',mainApi,root);
+const newsCardList = new NewsCardList(
+  list,
+  search,
+  preloader,
+  newsApi,
+  createCardFunction,
+  listButton,
+);
+
+const authorizationPopup = new Popup(popupAuthorization, 'popup_display', mainApi, root);
+const registrationPopup = new Popup(popupRegistration, 'popup_display', mainApi, root);
+const successfulPopup = new Popup(popupSuccessful, 'popup_display', mainApi, root);
 
 
-
-
-headerNavButton.addEventListener("click", (event) => {
+headerNavButton.addEventListener('click', () => {
   authorizationPopup.open();
 });
 
- headerNavButton.addEventListener("click", (event) => {
+headerNavButton.addEventListener('click', (event) => {
   event.stopPropagation();
   formAuhorizationValidator._errorReset();
   formAuhorization.reset();
@@ -76,64 +86,61 @@ headerNavButton.addEventListener("click", (event) => {
   headerNavButton.classList.remove('.header__nav_drop-down-nav-button');
   root.classList.add('root_dark');
   formAuhorizationValidator._checkInputsForms();
-  
-  
 });
-popupButton.addEventListener("click", (event) => {
+popupClose.addEventListener('click', () => {
+  registrationPopup.close();
+});
+popupSuccessfulRegistration.addEventListener('click', () => {
+  successfulPopup.close();
+});
+
+popupButton.addEventListener('click', (event) => {
   event.preventDefault();
 
-authorizationPopup.authorization(event);
+  authorizationPopup.authorization(event);
 
   authorizationPopup.close();
-
 });
 
 
-
-popupText.addEventListener("click", () => {
+popupText.addEventListener('click', () => {
   registrationPopup.open();
   formRegistrationValidator._errorReset();
   authorizationPopup.close();
   root.classList.add('root_dark');
   formRegistrationValidator._checkInputsForms();
-  });
+});
 
-  popupButtonRegistration.addEventListener("click", (event) => {
-    event.preventDefault();
-    registrationPopup.registration(event);
-   registrationPopup.close();
-   successfulPopup.open();
-  
-  });
-
-
-  
-  
-  headerMenu.addEventListener("click", (event) => {
-    openCloseNav();
-  });
-  
-  
+popupButtonRegistration.addEventListener('click', (event) => {
+  event.preventDefault();
+  registrationPopup.registration(event);
+  registrationPopup.close();
+  successfulPopup.open();
+});
 
 
+headerMenu.addEventListener('click', () => {
+  openCloseNav();
+});
+
+popupLink.addEventListener('click', () => {
+  successfulPopup.close();
+  formAuhorizationValidator._errorReset();
+  formAuhorization.reset();
+  authorizationPopup.open();
+  formAuhorizationValidator._checkInputsForms();
+});
 
 
-searchForm.addEventListener("submit", (event) => {
+searchForm.addEventListener('submit', (event) => {
   event.preventDefault();
   newsCardList.searchNews();
 });
 
-listButton.addEventListener("click", () => {
-  
+listButton.addEventListener('click', () => {
   newsCardList.addListNews();
 });
 
 
-
-
 formAuhorizationValidator.setEventListeners();
 formRegistrationValidator.setEventListeners();
-
-
-
-

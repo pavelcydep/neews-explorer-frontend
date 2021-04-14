@@ -1,0 +1,16 @@
+.popup__close-successful-registration{
+
+   
+        position: absolute;
+        width: 26px;
+        top: -20px;
+        right: -20px;
+        cursor: pointer;
+      }
+      
+      @media (max-width : 1023px) {
+        .popup__close-successful-registration {
+          display: none;
+        }
+
+}

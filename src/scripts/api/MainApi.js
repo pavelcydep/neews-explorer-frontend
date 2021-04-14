@@ -5,7 +5,7 @@ export default class MainApi {
     this.formRegistration = formRegistration;
   }
 
-  signup=()=>fetch(`${this.serverUrl}/signup`, {
+  signup=() => fetch(`${this.serverUrl}/signup`, {
     method: 'POST',
     credentials: 'include',
     headers: {
