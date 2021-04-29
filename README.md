@@ -21,7 +21,7 @@ News Explorer
 
 Склонировать проект на ПК:
 
-    git clone https://github.com/pavelcydep/servis-mesto-fetch.git
+    git clone https://github.com/pavelcydep/neews-explorer-frontend.git
 
 Установить зависимости
 
