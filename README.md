@@ -52,10 +52,10 @@ News Explorer
 
 Стек технологий
 ===============
-* ![alt text](html5%20(2)%20(2).png)  HTML 
-* CSS
-* JS
-* Webpack
+![alt text](html5%20(2)%20(2).png)  HTML 
+ CSS
+ JS
+Webpack
 
 Планы по доработке
 ==================
