@@ -52,7 +52,7 @@ News Explorer
 
 Стек технологий
 ===============
-* HTML 
+* ![alt text]()  HTML 
 * CSS
 * JS
 * Webpack
