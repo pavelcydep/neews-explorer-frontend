@@ -19,13 +19,17 @@ News Explorer
 
 ## Установка
 
-Склонировать проект на ПК:
+### Склонировать проект на ПК:
 
     git clone https://github.com/pavelcydep/neews-explorer-frontend.git
+![alt text](top2.png)   
 
-Установить зависимости
+
+### Установить зависимости
 
     npm install
+
+![alt text](top3.png)
 
 ## Работа
 
