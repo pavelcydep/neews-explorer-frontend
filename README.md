@@ -1,4 +1,4 @@
-![alt text](top3.png)
+![alt text](bloggif_608a8cffef916.gif)
 
 News Explorer
 =============
