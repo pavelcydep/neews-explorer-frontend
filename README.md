@@ -56,7 +56,7 @@ News Explorer
 
  ![alt text](js%20css.png)
  
-Webpack
+
 
 Планы по доработке
 ==================
