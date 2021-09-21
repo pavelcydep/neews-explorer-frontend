@@ -4,7 +4,7 @@ News Explorer
 =============
 Данный учебный проект является моей дипломной работой на курсе Веб-разработки от Яндекс.Практикума
 ****
-[Ссылка на проект](https://pavelcydep.github.io/Russia-adaptiv-verstka/)
+[Ссылка на проект](https://pavelcydep.github.io/neews-explorer-frontend/)
 
 Возможности использования
 =========================
